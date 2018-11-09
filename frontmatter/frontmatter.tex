@@ -1,0 +1,114 @@
+% -- Frontmatter
+% -- For now, done with a single document, could be split
+
+% -- Set numbering for this section
+\frontmatter
+
+
+% ===== Title page
+% -- This should be customized as desired
+% -- Basic resource: https://en.wikibooks.org/wiki/LaTeX/Title_Creation
+% -- Instructions about the title from the grad school:
+% -- The title of the thesis must not contain chemical or
+% -- mathematical formulas, symbols, superscripts, subscripts,
+% -- Greek letters, or other non-standard characters; words
+% -- must be substituted. 
+
+% -- This title page is somewhat based on the one provided by
+% -- the mnthesis.cls and the grad school requirements
+% -- Easy to read and customize, uses the titlepage environment
+
+\begin{titlepage}
+   \centering
+   % -- Star required here for top of page, from comment to answer here: https://tex.stackexchange.com/questions/237994/titlepage-and-vertical-space
+   \vspace*{1 cm}
+
+   % -- The actual thesis title
+   {\LARGE \bfseries
+      Modeling and Analysis of Chemical Kinetics \\[2 pt]         % -- 2 pt added to tweak, b/c g and f in modelinG and For were too close
+      for Hypersonic Flows in Air}
+   \vspace{2 cm}
+
+   % -- Dissertation/thesis depending on degree
+   {\bfseries A DISSERTATION \\
+      SUBMITTED TO THE FACULTY OF THE GRADUATE SCHOOL \\
+      OF THE UNIVERSITY OF MINNESOTA \\
+      BY}
+   \vspace{3 cm}
+
+   % -- Your name
+   {\Large\bfseries Ross S. Chaudhry}
+   \vspace{3 cm}
+
+   % -- Change degree if necessary
+   {\bfseries IN PARTIAL FULFILLMENT OF THE REQUIREMENTS \\
+      FOR THE DEGREE OF \\
+      DOCTOR OF PHILOSOPHY}
+   \vspace{2 cm}
+
+   % -- Adviser's name, and co-adviser if necessary
+   % -- Grad school spells it adviser
+   {\bfseries Adviser: Graham V. Candler}
+   \vspace{2 cm}
+
+   {\bfseries November 2018}
+\end{titlepage}
+
+% ===== Copyright page
+% -- Based strongly on the one from mnthesis.cls
+% -- Do not number this page
+\thispagestyle{empty}
+\null\vfil
+\begin{center}
+   \bfseries \large
+   \copyright \ Ross S. Chaudhry \ 2018 \\
+   ALL RIGHTS RESERVED
+\end{center}
+\vfil\newpage
+
+% -- Now the page numbering should actually begin, at i
+\setcounter{page}{1}
+
+% ===== Acknowledgements
+% -- Could \input{} text for this, but writing manually here works fine
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+This is the acknowledgements.
+
+
+% ===== Dedication
+% -- Could add a whole section here, but prefer the style from 3.2 of https://tug.org/pracjourn/2008-1/mori/mori.pdf
+% -- This section also easily customized.
+\newpage
+\phantomsection      % -- For hyperref location
+\addcontentsline{toc}{chapter}{Dedication}      % -- Should it be in TOC?
+\null\vspace{\stretch{1}}
+\begin{flushright}
+   % \emph{\large for Lyndsay} \hphantom{AAAAA}
+   \emph{\large for Lyndsay} \hspace*{2 cm}
+\end{flushright}
+\vspace{\stretch{2}}\null
+
+% ===== Abstract
+% -- Based strongly on mnthesis class
+% -- Abstract shouldn't have a big header, should be able to stand alone as a single page
+\newpage
+\phantomsection      % -- For hyperref location
+\begin{center} \large \bfseries Abstract \end{center}
+\addcontentsline{toc}{chapter}{Abstract}
+This is the abstract. Work was completed.
+
+% ===== Table of Contents/Tables/Figures
+\tableofcontents
+
+% -- Clearpage, add phantom section for hyperref, and add TOC line also
+% -- This structure from https://tex.stackexchange.com/questions/48509/insert-list-of-figures-in-the-table-of-contents
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables

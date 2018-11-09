@@ -1,0 +1,133 @@
+\begin{thebibliography}{21}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Chaudhry et~al.(2018)Chaudhry, Grover, Bender, Schwartzentruber, and
+  Candler}]{ChaudhryGBSC2018}
+Chaudhry, R.~S., Grover, M.~S., Bender, J.~D., Schwartzentruber, T.~E., and
+  Candler, G.~V., \enquote{Quasiclassical Trajectory Analysis of Oxygen
+  Dissociation via O$_2$, O, and N$_2$,} \emph{2018 AIAA Aerospace Sciences
+  Meeting}, AIAA Paper 2018-0237, 2018.
+\newblock \doi{10.2514/6.2018-0237}.
+
+\bibitem[{Gnoffo(1999)}]{Gnoffo1999}
+Gnoffo, P.~A., \enquote{Planetary-Entry Gas Dynamics,} \emph{Annual Review of
+  Fluid Mechanics}, Vol.~31, No.~1, 1999, pp. 459--494.
+\newblock \doi{10.1146/annurev.fluid.31.1.459}.
+
+\bibitem[{Candler(2019)}]{Candler2019}
+Candler, G.~V., \enquote{Rate Effects in Hypersonic Flows,} \emph{Annual Review
+  of Fluid Mechanics}, Vol.~51, No.~1, 2019, p. null.
+\newblock \doi{10.1146/annurev-fluid-010518-040258}.
+
+\bibitem[{McBride and Gordon(1996)}]{McbrideG1996}
+McBride, B.~J., and Gordon, S., \enquote{Computer Program for Calculation of
+  Complex Chemical Equilibrium Compositions and Applications, 2. Users Manual
+  and Program Description,} Tech. Rep. RP-1331-2, NASA, June 1996.
+
+\bibitem[{Riley et~al.(2006)Riley, Hobson, and Bence}]{RileyHB2006}
+Riley, K.~F., Hobson, M.~P., and Bence, S.~J., \emph{Mathematical Methods for
+  Physics and Engineering}, 3\textsuperscript{rd} ed., Cambridge University
+  Press, Cambridge, UK, 2006.
+
+\bibitem[{Boyd and Schwartzentruber(2017)}]{BoydS2017}
+Boyd, I.~D., and Schwartzentruber, T.~E., \emph{Nonequilibrium Gas Dynamics and
+  Molecular Simulation}, Cambridge Aerospace Series, Vol.~42, Cambridge
+  University Press, Cambridge, UK, 2017.
+
+\bibitem[{Truhlar and Muckerman(1979)}]{TruhlarM1979}
+Truhlar, D.~G., and Muckerman, J.~T., \enquote{Reactive Scattering Cross
+  Sections III: Quasiclassical and Semiclassical Methods,} \emph{Atom--Molecule
+  Collision Theory: A Guide for the Experimentalist}, edited by R.~B.
+  Bernstein, Plenum Press, New York, 1979, Chap.~16, pp. 505 -- 566.
+
+\bibitem[{Park(1996)}]{Park1996}
+Park, C., \enquote{Review of Finite-Rate Chemistry Models for Air Dissociation
+  and Ionization,} \emph{Molecular Physics and Hypersonic Flows}, NATO ASI
+  Series (Series C: Mathematical and Physical Sciences), Vol. 482, edited by
+  M.~Capitelli, Kluwer Academic Publishers, Dordrecht, 1996, pp. 581--596.
+\newblock \doi{10.1007/978-94-009-0267-1_39}.
+
+\bibitem[{Bender(2016)}]{Bender2016}
+Bender, J.~D., \enquote{Multiscale Computational Analysis of Nitrogen and
+  Oxygen Gas-Phase Thermochemistry in Hypersonic Flows,} Ph.D. thesis,
+  University of Minnesota, Minneapolis, MN, February 2016.
+
+\bibitem[{Eckerman(1958)}]{Eckerman1958}
+Eckerman, J., \enquote{The Measurement of the Rate of Dissociation of Oxygen at
+  High Temperature,} Ph.D. thesis, The Catholic University of America,
+  Washington, DC, 1958.
+
+\bibitem[{Matthews(1959)}]{Matthews1959}
+Matthews, D.~L., \enquote{Interferometric Measurement in the Shock Tube of the
+  Dissociation Rate of Oxygen,} \emph{The Physics of Fluids}, Vol.~2, No.~2,
+  1959, pp. 170--178.
+\newblock \doi{10.1063/1.1705908}.
+
+\bibitem[{Byron(1959)}]{Byron1959}
+Byron, S.~R., \enquote{Measurement of the Rate of Dissociation of Oxygen,}
+  \emph{The Journal of Chemical Physics}, Vol.~30, No.~6, 1959, pp. 1380--1392.
+\newblock \doi{10.1063/1.1730209}.
+
+\bibitem[{Camac and Vaughan(1961)}]{CamacV1961}
+Camac, M., and Vaughan, A., \enquote{O$_2$ Dissociation Rates in O$_2$-Ar
+  Mixtures,} \emph{The Journal of Chemical Physics}, Vol.~34, No.~2, 1961, pp.
+  460--470.
+\newblock \doi{10.1063/1.4757209}.
+
+\bibitem[{Rink et~al.(1961)Rink, Knight, and Duff}]{RinkKD1961}
+Rink, J.~P., Knight, H.~T., and Duff, R.~E., \enquote{Shock Tube Determination
+  of Dissociation Rates of Oxygen,} \emph{The Journal of Chemical Physics},
+  Vol.~34, No.~6, 1961, pp. 1942--1947.
+\newblock \doi{10.1063/1.1731797}.
+
+\bibitem[{Schexnayder and Evans(1961)}]{SchexnayderE1961}
+Schexnayder, C.~J., Jr., and Evans, J.~S., \enquote{Measurements of the
+  Dissociation Rate of Molecular Oxygen,} Tech. Rep. TR R-108, NASA, 1961.
+
+\bibitem[{Generalov and Losev(1966)}]{GeneralovL1966}
+Generalov, N.~A., and Losev, S.~A., \enquote{Vibration, Excitation, and
+  Molecular Dissociation of Gaseous Oxygen and Carbon Dioxide in a Shock Wave,}
+  \emph{Journal of Quantitative Spectroscopy and Radiative Transfer}, Vol.~6,
+  No.~1, 1966, pp. 101--125.
+\newblock \doi{10.1016/0022-4073(66)90066-5}.
+
+\bibitem[{Shatalov(1973)}]{Shatalov1973}
+Shatalov, O.~P., \enquote{Molecular Dissociation of Oxygen in the Absence of
+  Vibrational Equilibrium,} \emph{Combustion, Explosion and Shock Waves},
+  Vol.~9, No.~5, 1973, pp. 610--613.
+\newblock \doi{10.1007/BF00742888}.
+
+\bibitem[{Jerig et~al.(1991)Jerig, Thielen, and Roth}]{JerigTR1991}
+Jerig, L., Thielen, K., and Roth, P., \enquote{High-Temperature Dissociation of
+  Oxygen Diluted in Argon or Nitrogen,} \emph{AIAA Journal}, Vol.~29, No.~7,
+  1991, pp. 1136--1139.
+\newblock \doi{10.2514/3.10714}.
+
+\bibitem[{Ibraguimova et~al.(2013)Ibraguimova, Sergievskaya, Levashov,
+  Shatalov, Tunik, and Zabelinskii}]{IbraguimovaSLSTZ2013}
+Ibraguimova, L.~B., Sergievskaya, A.~L., Levashov, V.~Y., Shatalov, O.~P.,
+  Tunik, Y.~V., and Zabelinskii, I.~E., \enquote{Investigation of Oxygen
+  Dissociation and Vibrational Relaxation at Temperatures 4000--10800 K,}
+  \emph{The Journal of Chemical Physics}, Vol. 139, No.~3, 2013, p. 034317.
+\newblock \doi{10.1063/1.4813070}.
+
+\bibitem[{Bortner(1969)}]{Bortner1969}
+Bortner, M.~H., \enquote{A Review of Rate Constants of Selected Reactions of
+  Interest in Re-Entry Flow Fields in the Atmosphere,} Tech. Rep. NBTNA-484,
+  National Bureau of Standards, May 1969.
+
+\bibitem[{Ibraguimova et~al.(1999)Ibraguimova, Smekhov, and
+  Shatalov}]{IbraguimovaSS1999}
+Ibraguimova, L.~B., Smekhov, G.~D., and Shatalov, O.~P., \enquote{Dissociation
+  Rate Constants of Diatomic Molecules under Thermal Equilibrium Conditions,}
+  \emph{Fluid Dynamics}, Vol.~34, No.~1, 1999, pp. 153 -- 157.
+\newblock \doi{10.1007/BF02698767}.
+
+\end{thebibliography}

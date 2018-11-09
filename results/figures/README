@@ -1,0 +1,10 @@
+# -- Be sure to record where in your filesystem each figure is from!
+# -- This is a lifesaver for both papers and presenations
+
+# ===== Nitrogen dissoc
+scp chaud106@ssh.aem.umn.edu:/project/chaud106/Chemistry/Traj/Collected/N3/N3_Dissoc_vs_Exchange.eps ./
+
+
+# ===== N2O2 and combined
+scp chaud106@ssh.aem.umn.edu:/project/chaud106/Chemistry/Traj/Collected/O2-dissoc/O2-Dissoc_AllPartners_Equil.eps ./
+scp chaud106@ssh.aem.umn.edu:/project/chaud106/Chemistry/Traj/Collected/O2-dissoc/O2-Dissoc_AllPartners_Nonequil.eps ./

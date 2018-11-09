@@ -1,0 +1,161 @@
+% -- UMN Ph.D Thesis Template for modern Latex
+% -- Designed to use modern packages and basic modifications to yield a flexible result
+% -- Author: Ross S. Chaudhry, November 2018
+
+% -- The most popular previous version uses a *lot* of hacks that should be done with modern packages.
+% -- (https://github.com/agude/UMN-PhD-Thesis-Template)
+% -- I found this made it difficult to customize,
+% -- such as the page number locations, table style, geometry, and so on.
+
+% -- Good links for development of this document:
+%     ~ 'Writing a thesis with latex' https://tug.org/pracjourn/2008-1/mori/mori.pdf
+%     ~ UMN latex template on github: https://github.com/agude/UMN-PhD-Thesis-Template
+%     ~ Thesis format guidelines from the grad school: https://assets.asr.umn.edu/files/gssp/Thesis_formatting_guidelines.pdf
+
+% -- main.tex includes all global formatting modifications
+% -- Other sections are:
+
+% -- Book class because it offers front, main, and backmatter commands
+% -- Good discussion here: https://tex.stackexchange.com/questions/36988/regarding-the-book-report-and-article-document-classes-what-are-the-mai
+% -- Uses the following settings:
+%     ~ 11 pt font. Personally I think 10 is too small, which is the minimum of graduate school.
+%     ~ oneside makes the geometry layout not dependent on parity (even-odd).
+%       Grad school requires same layout for each page, although apparently it can be printed two-sided.
+%       In this case, the printing firm modifies the layout (shift 0.5 in left).
+%     ~ openany means chapters can begin on either right or left pages.
+% -- Unfortunately, the requirements are incompatable with two-sided documents.
+\documentclass[11 pt, oneside, openany, letterpaper]{book}
+
+% ===== Declare all packages, and set settings for those packages
+% -- Page geometry
+% -- includefoot/includehead include the header and footer in main block, ie NOT margins
+% -- If there is *nothing* inside the header, do not use includefoot
+% -- But, if there are page numbers inside the header, use includefoot
+% -- Same for head
+% -- For now, all page numbers should be in header
+\usepackage[letterpaper,
+   top=1in,bottom=1in,
+   inner=1.5in,outer=1in,
+   includehead]
+   {geometry}
+
+% -- Spacing of document, double or onehalf is allowed
+\usepackage[onehalfspacing]{setspace}
+
+% -- Essentials
+\usepackage{hyperref}               % -- Makes headings and links clickable. Mandatory because \phantomsection command
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+% -- Tables
+\usepackage{booktabs}               % -- Pretty tables, provides \toprule, \midrule, bottomrule
+\usepackage{multirow}
+\usepackage{threeparttable}         % -- Footnotes and set-width captions for tables. Enables \tnote and threeparttable
+% -- Symbol order (for *each* table)
+% -- Symbol order should follow here: https://tex.stackexchange.com/questions/54899/looking-for-a-style-guideline-to-put-many-references-in-a-table
+\newcommand{\mytna}{*}
+\newcommand{\mytnb}{\textdagger}
+\newcommand{\mytnc}{\textdaggerdbl}
+\newcommand{\mytnd}{\S}
+\newcommand{\mytne}{$\|$}
+\newcommand{\mytnf}{$\!$\#}
+
+% -- Citations and references
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage[noabbrev, capitalize]{cleveref}  % -- \cref{myfig} looks like Figure~\ref{myfig}
+\newcommand{\creflastconjunction}{, and }    % --Always use the serial comma
+
+
+% -- Figures and captions
+\usepackage{subcaption}             % -- Provides subfigure
+\DeclareCaptionFont{xbf}{\bfseries\boldmath}
+\captionsetup{font=xbf}             % -- Sets captions to bold and boldmath
+
+% -- Units, use siunitx a lot for text and tables
+\usepackage{siunitx}                % -- Elegant handling of numbers and uncertainty; provides num, si, and SI
+\sisetup{
+   detect-weight=true, detect-family=true,      % -- Inherit weight (bold, not bold) and family from surrounding text (ie bold in captions)
+   group-separator = {,},                       % -- 10000 => 10,000, not sure if I want this
+   }
+
+% -- Others, some used specifically for this example
+\usepackage[version=4]{mhchem}      % -- For chemical symbols and reactions, provides ce
+\usepackage{pdflscape}              % -- Landscape pages, provides \begin{landscape}
+\usepackage{physics}                % -- Convenience variables, provides pdv. Conflicts with \ev \Tr
+
+% -- If we want showframe with pdflscape, uncomment this
+% -- from here: https://tex.stackexchange.com/questions/115908/geometry-showframe-landscape
+% \geometry{showframe}
+% \makeatletter
+% \newcommand*{\gmshow@textheight}{\textheight}
+% \newdimen\gmshow@@textheight
+% \g@addto@macro\landscape{%
+%   \gmshow@@textheight=\hsize
+%   \renewcommand*{\gmshow@textheight}{\gmshow@@textheight}%
+% }
+% \def\Gm@vrule{%
+%   \vrule width 0.2pt height\gmshow@textheight depth\z@
+% }%
+% \makeatother
+
+% -- Generate dummy text with lipsum
+% -- ONLY used for templating, should go away!
+\usepackage{lipsum}
+
+
+% ===== All commands and macros, perhaps as input if it gets too long
+% -- Minimal for this example document
+\newcommand{\etal}[0]{~\emph{et~al}.}
+\newcommand{\sea}{\emph{et~al}.}          % Short et al, for when it's at the start of a newline
+\newcommand{\twofigwidth}{0.48}
+
+\newcommand{\TD}{T_\mathrm{D}}
+\newcommand{\kd}{k_\mathrm{d}}
+\newcommand{\Tv}{T_\mathrm{v}}
+\newcommand{\Ttr}{T_\mathrm{tr}}
+
+% ===== The actual document
+% -- Almost all of the main body should be in separate files, 'include' here
+% -- For speed, only include the sections listed here for now.
+% -- If typesetting a specific section (tough table or equation) many times, this will make it faster.
+% -- Uncommented for this example
+% \includeonly{
+%    frontmatter/frontmatter,
+%    introduction/introduction.
+%    methodology/methodology,
+%    results/results,
+%    conclusions/conclusions,
+% }
+
+\begin{document}
+
+% -- All frontmatter, including \frontmatter call
+\include{frontmatter/frontmatter}
+
+% -- All main matter
+% -- Could split these up in any way, here it is by chapter.
+\mainmatter
+\include{introduction/introduction}
+\include{methodology/methodology}
+\include{results/results}
+\include{conclusions/conclusions}
+
+% -- Bibliography should be single spaced, so group it from here: https://tex.stackexchange.com/questions/408757/change-linespacing-in-bibliography
+% -- Choose new-aiaa for style, could pick others
+% -- Formatting here is adapted https://tug.org/pracjourn/2008-1/mori/mori.pdf page 13
+\cleardoublepage
+\begingroup
+\singlespacing
+\bibliographystyle{new-aiaa}
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{Bibliography}
+\endgroup
+
+% -- 
+
+
+
+\end{document}
+

@@ -1,0 +1,113 @@
+% ===== INTRODUCTION
+% -- Make all figures relative to this folder
+\graphicspath{{./introduction/}}
+
+\chapter{Introduction}
+\label{sec:Introduction}
+
+\section{Motivation}
+\label{sec:Motivation}
+Chemical reactions occur in the gas flow around vehicles traveling at hypersonic speeds,
+   which is typically defined as at least five times faster than the speed of sound.
+The rate of these reactions is often comparable to the time scales of the flow and other relevant processes.
+Therefore, predictions of the chemical evolution of the flow must consider the finite
+   rate at which chemical kinetics occur~\cite{Gnoffo1999,Candler2019}.
+
+Some example references:
+\begin{itemize}
+\item
+Articles were cited already~\cite{Gnoffo1999,Candler2019}.
+
+\item
+Conference papers~\cite{ChaudhryGBSC2018}.
+
+\item
+Technical report, the authors are McBride and Gordon~\cite{McbrideG1996}.
+
+\item
+Two books are Ref.~\cite{RileyHB2006,BoydS2017}.
+
+\item
+Book chapters by specific authors are~\cite{TruhlarM1979,Park1996}.
+
+\item
+A Ph.D thesis is Bender~\cite{Bender2016}.
+\end{itemize}
+
+\section{Measurements of Oxygen Dissociation}
+Collect all rate parameters and uncertainties at the end in generic Arrhenius form, for example from Boyd and Schwartzentruber~\cite[p.~130]{BoydS2017},
+%
+\begin{align}
+   \kd &= C T^{n} \exp( - \frac{\TD}{T} )
+   \label{eqn:Arrhenius}
+\end{align}
+
+\begin{landscape}
+
+\begin{table}
+   \centering
+   \begin{threeparttable}
+   \caption[\ce{O2} dissociation shock tube experiments, Ref.~\cite{ChaudhryGBSC2018} example]
+      {Summary of oxygen dissociation shock tube experiments with partners \ce{O2}, \ce{O}, and \ce{N2}.
+      Equilibrium dissociation rate fit to Arrhenius form, \cref{eqn:Arrhenius}, is shown.
+      For this table, 5 significant figures are provided for $C$ and $\TD$ regardless of estimated uncertainty.}
+   \label{tbl:O2_lit_experiments}
+   \small
+   \begin{tabular}{ l l l l S[table-format=1.4e+2] S[table-format=-1.2] c c c c }
+      \toprule
+                                                                                                &                          &                                                                                                        &                             &  \multicolumn{3}{c}{Rate Parameters}                                                                                                       &  \multicolumn{2}{c}{Uncertainty $\qty[\%]$}         &                                                           \\
+      \cmidrule(rl){5-7} \cmidrule(rl){8-9}
+      Reference                                                                                 &  Year                    &  Method                                                                                                &  \ce{M}                     &  {$C$ $\qty[\si{\cm\cubed\s^{-1}\kelvin^{-n}}]$} &  {n}                                    &  {$\TD$ $\qty[\si{\kelvin}]$}                 &  \textit{lower}       &  \textit{upper}             &  Temp. Range $\qty[\si{\kelvin}]$                         \\
+      \midrule
+      Eckerman~\cite{Eckerman1958}                                                              &  1958                    &  Ballistics Range                                                                                      &  \ce{O2}                    &  2.6782e-3                                       &  -1.5                                   &  \num{59396}                                  &  {-}                  &  {-}                        &  \numrange{4000}{7000}                                    \\
+      \midrule[0.25 pt]
+      Matthews~\cite{Matthews1959}                                                              &  1959                    &          Interferometry                                                                                &  \ce{O2}                    &  1.8857 e1                                       &  -2.5                                   &  \num{59380}                                  &  37                   &  32                         &  \numrange{3000}{5000}                                    \\
+      % \cmidrule(rl){1-2} \cmidrule(rl){6-9}
+      \midrule[0.25 pt]
+      \multirow{2}{*}{Byron~\cite{Byron1959}}                                                   &  \multirow{2}{*}{1959}   &  \multirow{2}{*}{        Interferometry}                                                               &  \ce{O2}                    &  3.1948e-3                                       &  -1.5                                   &  \multirow{2}{*}{\num{59350}}                 &  \multirow{2}{*}{25}  &  \multirow{2}{*}{25}        &  \multirow{2}{*}{\numrange{2800}{5000}}                   \\
+                                                                                                &                          &                                                                                                        &  \ce{O}                     &  1.8905e-6                                       &  -0.5                                   &                                               &                       &                             &                                                           \\
+%                                                                                               &                          &                                                                                                        &  \ce{Ar}                    &  8.5281e-8                                       &  -0.5                                   &                                               &                       &                             &                                                           \\
+      % \cmidrule(rl){1-2} \cmidrule(rl){6-9}
+      \midrule[0.25 pt]
+      \multirow{2}{*}{\shortstack[l]{Camac and \\ Vaughan~\cite{CamacV1961}}}                   &  \multirow{2}{*}{1961}   &  \multirow{2}{*}{UV absorption}                                                                        &  \ce{O2}                    &  1.7745e-5                                       &  -1                                     &  \multirow{2}{*}{\num{59369}}                 &  99                   &  0                          &  \numrange{6000}{7000}                                    \\
+                                                                                                &                          &                                                                                                        &  \ce{O}                     &  1.0535e0                                        &  -2                                     &                                               &  50                   &  50                         &  \numrange{5000}{7500}                                    \\
+%                                                                                               &                          &                                                                                                        &  \ce{Ar}                    &  5.9150e-6                                       &  -1                                     &                                               &  20                   &  20                         &  \numrange{3400}{7500}                                    \\
+      % \cmidrule(rl){1-2} \cmidrule(rl){6-6}
+      \midrule[0.25 pt]
+      \multirow{2}{*}{Rink\etal~\cite{RinkKD1961}}                                              &  \multirow{2}{*}{1961}   &  \multirow{2}{*}{x-ray absorption}                                                                     &  \ce{O2}                    &  5.3030e-5                                       &  \multirow{2}{*}{\num{-1}}              &  \multirow{2}{*}{\num{59578}}                 &  \multirow{2}{*}{20}  &  \multirow{2}{*}{20}        &  \multirow{2}{*}{\numrange{3000}{6000}}                   \\
+                                                                                                &                          &                                                                                                        &  \ce{O}                     &  1.5909e-4                                       &                                         &                                               &                       &                             &                                                           \\
+%                                                                                               &                          &                                                                                                        &  \ce{Xe}                    &  1.5577e-5                                       &                                         &                                               &  15                   &  15                         &                                                           \\
+      \midrule[0.25 pt]
+      Schexnayder                                                                               &  \multirow{2}{*}{1961}   &  \multirow{2}{*}{UV absorption}                                                                        &  \multirow{2}{*}{\ce{O2}}   &  \multirow{2}{*}{\num{1.5073e-10}}               &  \multirow{2}{*}{\hphantom{-}\num{0}}   &  \multirow{2}{*}{\num{37378}}                 &  \multirow{2}{*}{-}   &  \multirow{2}{*}{-}         &  \multirow{2}{*}{\numrange{3800}{9000}}                   \\
+                  and Evans~\cite{SchexnayderE1961}                                             &                          &                                                                                                        &                             &                                                  &                                         &                                               &                       &                             &                                                           \\
+      \midrule[0.25 pt]
+      \multirow{2}{*}{\shortstack[l]{Generalov and \\ Losev~\cite{GeneralovL1966}\tnote{\mytna}}}& \multirow{2}{*}{1966}   &  \multirow{2}{*}{UV absorption}                                                                        &  \ce{O2}                    &  9.4965e4                                        &  \multirow{2}{*}{\num{-3.5}}            &  \multirow{2}{*}{\num{59380}}                 &  \multirow{2}{*}{-}   &  \multirow{2}{*}{-}         &  \numrange{2600}{7000}                                    \\
+                                                                                                &                          &                                                                                                        &  \ce{N2}                    &  1.6800e4                                        &                                         &                                               &                       &                             &  \numrange{2000}{7000}                                    \\
+      \midrule[0.25 pt]
+      \multirow{2}{*}{Shatalov~\cite{Shatalov1973}}                                             &  \multirow{2}{*}{1973}   &  \multirow{2}{*}{2-$T$ UV absorption}                                                                  &  \ce{O2}                    &  1.8079e1                                        &  -2.5                                   &  \multirow{2}{*}{\num{59369}\tnote{\mytnb}}   &  \multirow{2}{*}{-}   &  \multirow{2}{*}{-}         &  \numrange{3700}{10000}                                   \\
+                                                                                                &                          &                                                                                                        &  \ce{O}                     &  1.8735e-6                                       &  -0.5                                   &                                               &                       &                             &  \numrange{4900}{10000}                                   \\
+      \midrule[0.25 pt]
+      Jerig\etal~\cite{JerigTR1991}                                                             &  1991                    &  UV absorption (\ce{O})                                                                                &  \ce{N2}                    &  5.6458e-5                                       &  -1                                     &  \num{59380}                                  &  25                   &  25                         &  \numrange{2463}{3999}                                    \\
+      \midrule[0.25 pt]
+%       Ibraguimova\etal~\cite{IbraguimovaSLSTZ2013}                                              &  2013                    &  2-$T$ UV absorption                                                                                   &  \ce{O2}                    &  \num{6.4263e3}                                  &  -3.1                                   &  59380                                        &  50                   &  100                        &  \numrange{6000}{11000}\myTFNibrarefold                   \\
+      \multirow{2}{*}{\shortstack[l]{Ibraguimova \\ \sea~\cite{IbraguimovaSLSTZ2013}}}          &  \multirow{2}{*}{2013}   &  \multirow{2}{*}{2-$T$ UV absorption}                                                                  &  \multirow{2}{*}{\ce{O2}}   &  \multirow{2}{*}{\num{6.4263e3}}                 &  \multirow{2}{*}{-3.1}                  &  \multirow{2}{*}{\num{59380}}                 &  \multirow{2}{*}{50}  &  \multirow{2}{*}{100}       &  \multirow{2}{*}{\numrange{6000}{11000}\tnote{\mytnc}}    \\
+           \\
+      \bottomrule
+   \end{tabular}
+   \begin{tablenotes}
+      \item [\mytna]
+         % -- Generalove and Losev O2
+         Based on information in the translated abstract and Ref.~\cite{Bortner1969};
+         no complete translation is available.
+      \item [\mytnb]
+         % -- Shatalov, Td
+         Dissociation energy is not given directly, so the value from Generalov and Losev~\cite{GeneralovL1966} is used.
+      \item [\mytnc]
+         % -- In first mention of Ibraguimova 2013
+         For low temperatures (\SIrange{2000}{6000}{\kelvin}), the fit by Ibraguimova\etal~\cite{IbraguimovaSS1999}
+         was found to describe the data.
+   \end{tablenotes}
+   \end{threeparttable}
+\end{table}
+
+\end{landscape}

@@ -1,0 +1,12 @@
+Ph.D thesis template for LaTeX which conforms with University of Minnesota Guidelines
+Created by Ross S. Chaudhry
+
+The document is constructed using modern packages
+   and simple commands.
+The entire document should be easily understandable by
+   somebody with beginner LaTeX functionality.
+Flexibility is achieved by the user reading the existing
+   method and modifying it, rather than via preset options.
+
+To build, from the main folder:
+latexmk -pdf main
