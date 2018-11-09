@@ -70,6 +70,9 @@
 \newcommand{\mytne}{$\|$}
 \newcommand{\mytnf}{$\!$\#}
 
+% -- Longtable for glossary section
+\usepackage{longtable}
+
 % -- Citations and references
 \usepackage[sort&compress,numbers]{natbib}
 \usepackage[noabbrev, capitalize]{cleveref}  % -- \cref{myfig} looks like Figure~\ref{myfig}
@@ -111,7 +114,6 @@
 % -- ONLY used for templating, should go away!
 \usepackage{lipsum}
 
-
 % ===== All commands and macros, perhaps as input if it gets too long
 % -- Minimal for this example document
 \newcommand{\etal}[0]{~\emph{et~al}.}
@@ -125,12 +127,13 @@
 
 \newcommand{\er}{\varepsilon_\mathrm{rot}}
 \renewcommand{\ev}{\varepsilon_\mathrm{vib}}       % -- Renew b/c conflicts with physics, was expectation value
+\newcommand{\eint}{\varepsilon_\mathrm{int}}
 
 % ===== The actual document
 % -- Almost all of the main body should be in separate files, 'include' here
 % -- For speed, only include the sections listed here for now.
 % -- If typesetting a specific section (tough table or equation) many times, this will make it faster.
-% -- Uncommented for this example
+% -- If you are doing this, a fresh run *must* be run with includeonly uncommented first (https://tex.stackexchange.com/questions/280572/problem-using-includeonly)
 % \includeonly{
 %    frontmatter/frontmatter,
 %    introduction/introduction.
