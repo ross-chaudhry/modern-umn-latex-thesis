@@ -32,16 +32,34 @@
 % -- If there is *nothing* inside the header, do not use includefoot
 % -- But, if there are page numbers inside the header, use includefoot
 % -- Same for head
-% -- Choose to use page numbers in footer always, so *nothing* can go in header
+% -- For the current configuration, we have headers for 'fancy' pages (most) and headers for 'plain' pages (chapter start...)
+% -- so there are *NO* footers.
 \usepackage[letterpaper,
    top=1in,bottom=1in,
    inner=1.5in,outer=1in,
-   includefoot]
+   includehead]
    {geometry}
 
-% -- Page numbering location, set to middle bottom the whole way
-% -- Could use fancyhdr if more stuff was desired
-\pagestyle{plain}
+% -- Define headers and footers
+% -- This part can be highly customized by fancyhdr, here we choose something relatively simple
+
+% -- For all 'fancy' pages, the left header has the section number and title (eg. 3.1 Oxygen Dissociation in O2 + N2), in bold,
+% -- and the right header has the page number
+
+% -- For all 'plain' pages, there is nothing in the header and the page number is centered in the footer.
+% -- 'Plain' pages are those which begin chapters, the title page, and other exceptions.
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}                         % -- Modify the 'fancy' style
+\fancyhf{}                                % -- Clear header and footer
+\fancyhead[LO,RE]{\textbf{\rightmark}}    % -- Section number and title, in bold
+\fancyhead[RO,LE]{\thepage}               % -- Page number top right
+
+\fancypagestyle{plain}{                   % -- Modify the 'plain' style
+\fancyhf{}                                % -- Clear header and footer
+\fancyhead[RO,LE]{\thepage}               % -- Add page number to top right (like for fancy)
+\renewcommand{\headrulewidth}{0pt}        % -- Remove rule on header
+}
 
 % -- Spacing of document, double or onehalf is allowed
 \usepackage[onehalfspacing]{setspace}
