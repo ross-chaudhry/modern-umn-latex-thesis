@@ -1,0 +1,48 @@
+\chapter{Tables}
+\label{sec:Appendix_Tables}
+This is some filler text.
+
+\begin{landscape}
+% ===== N3 TABLES
+
+% -- Remove one temperature (for equil rename to T) and N4_DUMMY, add rules
+
+% Collected_N3_TX_TvX_table_line_main.dat
+\begin{table}[p]
+   \caption[\ce{N2 + N}, $\Ttr=\Tv$]
+      {Summary statistics for \ce{N2 + N}, equilibrium test set ($\Ttr=\Tv$).}
+   \label{tbl:App_N3_EQ}
+   \footnotesize
+   \begin{tabular}{  S[table-format=5]    S[table-format=3]                   S[table-format=1.3(2)e-2]                                                     S[table-format=-1.3(2)]                                                       S[table-format=-1.3(2)]                                                       S[table-format=1.4(2)e-2]                                                     S[table-format=-1.1(2)e-1]                                                    S[table-format=1.1(2)e-1]                                                  }
+      \toprule
+      {$T$ $\qty[\si{\kelvin}]$}       &  {$\mathcal{N}$ $\qty[\num{e6}]$} &  {$k_\mathrm{d}$ $\qty[\si{\cm\cubed\per\sec}]$}                            &  {$\left<\Delta\ev\right>_\mathrm{d}$ $\qty[\si{\eV}]$}                     &  {$\left<\Delta\er\right>_\mathrm{d}$ $\qty[\si{\eV}]$}                     &  {$k_\mathrm{e}$ $\qty[\si{\cm\cubed\per\sec}]$}                            &  {$\left<\Delta\ev\right>_\mathrm{e}$ $\qty[\si{\eV}]$}                     &  {$\left<\Delta\er\right>_\mathrm{e}$ $\qty[\si{\eV}]$}                     \\
+      \midrule
+      8000                             &  240                              &  5.6 \pm 0.2 e-15                                                           &  -7.9 \pm 0.4                                                               &  -1.60 \pm 0.09                                                             &  7.718 \pm 0.005 e-12                                                       &  -3.0 \pm 0.7 e-3                                                           &  2.1 \pm 0.8 e-3                                                            \\
+      10000                            &  150                              &  8.20 \pm 0.12 e-14                                                         &  -7.63 \pm 0.13                                                             &  -1.82 \pm 0.04                                                             &  2.0638 \pm 0.0011 e-11                                                     &  -4.6 \pm 0.7 e-3                                                           &  8.8 \pm 0.9 e-3                                                            \\
+      13000                            &  60                               &  1.006 \pm 0.007 e-12                                                       &  -7.20 \pm 0.06                                                             &  -2.20 \pm 0.02                                                             &  5.528 \pm 0.003 e-11                                                       &  -5.2 \pm 1.0 e-3                                                           &  0.0104 \pm 0.0013                                                          \\
+      20000                            &  18                               &  1.722 \pm 0.006 e-11                                                       &  -6.52 \pm 0.03                                                             &  -2.896 \pm 0.013                                                           &  1.8377 \pm 0.0012 e-10                                                     &  -4.9 \pm 1.6 e-3                                                           &  0.014 \pm 0.002                                                            \\
+      30000                            &  18                               &  8.939 \pm 0.014 e-11                                                       &  -5.930 \pm 0.011                                                           &  -3.490 \pm 0.007                                                           &  3.6133 \pm 0.0019 e-10                                                     &  -4.9 \pm 1.5 e-3                                                           &  0.018 \pm 0.002                                                            \\
+      \bottomrule
+   \end{tabular}
+\end{table}
+
+% Collected_N3_T20_TvX_table_line_main.dat
+% -- Manually modify equil devib for T20,Tv20
+\begin{table}[p]
+   \caption[\ce{N2 + N}, $\Ttr=\SI{20000}{\kelvin}$]
+      {Summary statistics for \ce{N2 + N}, nonequilibrium test set ($\Ttr=\SI{20000}{\kelvin}$).}
+   \label{tbl:App_N3_NEQ}
+   \footnotesize
+   \begin{tabular}{  S[table-format=5]    S[table-format=2]                   S[table-format=1.3(2)e-2]                                                     S[table-format=-1.3(2)]                                                       S[table-format=-1.3(2)]                                                       S[table-format=1.4(2)e-2]                                                     S[table-format=-1.4(2)]                                                       S[table-format=-1.4(2)]                                                    }
+      \toprule
+      {$\Tv$ $\qty[\si{\kelvin}]$}     &  {$\mathcal{N}$ $\qty[\num{e6}]$} &  {$k_\mathrm{d}$ $\qty[\si{\cm\cubed\per\sec}]$}                            &  {$\left<\Delta\ev\right>_\mathrm{d}$ $\qty[\si{\eV}]$}                     &  {$\left<\Delta\er\right>_\mathrm{d}$ $\qty[\si{\eV}]$}                     &  {$k_\mathrm{e}$ $\qty[\si{\cm\cubed\per\sec}]$}                            &  {$\left<\Delta\ev\right>_\mathrm{e}$ $\qty[\si{\eV}]$}                     &  {$\left<\Delta\er\right>_\mathrm{e}$ $\qty[\si{\eV}]$}                     \\
+      \midrule
+      8000                             &  90                               &  2.122 \pm 0.007 e-12                                                       &  -1.333 \pm 0.008                                                           &  -6.71 \pm 0.03                                                             &  1.1541 \pm 0.0004 e-10                                                     &  0.9139 \pm 0.0007                                                          &  -0.5638 \pm 0.0011                                                         \\
+      10000                            &  60                               &  2.903 \pm 0.011 e-12                                                       &  -2.292 \pm 0.014                                                           &  -6.11 \pm 0.03                                                             &  1.2434 \pm 0.0005 e-10                                                     &  0.7583 \pm 0.0009                                                          &  -0.4785 \pm 0.0013                                                         \\
+      13000                            &  60                               &  5.118 \pm 0.015 e-12                                                       &  -4.011 \pm 0.017                                                           &  -4.878 \pm 0.019                                                           &  1.4031 \pm 0.0006 e-10                                                     &  0.5136 \pm 0.0009                                                          &  -0.3338 \pm 0.0013                                                         \\
+      20000                            &  18                               &  1.722 \pm 0.006 e-11                                                       &  -6.52 \pm 0.03                                                             &  -2.896 \pm 0.013                                                           &  1.8377 \pm 0.0012 e-10                                                     &  -0.0049 \pm 0.0016                                                         &  0.014 \pm 0.002                                                            \\
+      30000                            &  60                               &  4.371 \pm 0.005 e-11                                                       &  -7.565 \pm 0.010                                                           &  -2.017 \pm 0.003                                                           &  2.3971 \pm 0.0008 e-10                                                     &  -0.4721 \pm 0.0009                                                         &  0.3574 \pm 0.0011                                                          \\
+      \bottomrule
+   \end{tabular}
+\end{table}
+\end{landscape}

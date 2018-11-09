@@ -32,15 +32,24 @@
 % -- If there is *nothing* inside the header, do not use includefoot
 % -- But, if there are page numbers inside the header, use includefoot
 % -- Same for head
-% -- For now, all page numbers should be in header
+% -- Choose to use page numbers in footer always, so *nothing* can go in header
 \usepackage[letterpaper,
    top=1in,bottom=1in,
    inner=1.5in,outer=1in,
-   includehead]
+   includefoot]
    {geometry}
+
+% -- Page numbering location, set to middle bottom the whole way
+% -- Could use fancyhdr if more stuff was desired
+\pagestyle{plain}
 
 % -- Spacing of document, double or onehalf is allowed
 \usepackage[onehalfspacing]{setspace}
+
+% -- Configure the appendix, currently set to the following:
+%     ~ titletoc     In the TOC, lists appendix as Appendix A
+%       (title and header are set by default)
+\usepackage[titletoc]{appendix}
 
 % -- Essentials
 \usepackage{hyperref}               % -- Makes headings and links clickable. Mandatory because \phantomsection command
@@ -65,7 +74,6 @@
 \usepackage[sort&compress,numbers]{natbib}
 \usepackage[noabbrev, capitalize]{cleveref}  % -- \cref{myfig} looks like Figure~\ref{myfig}
 \newcommand{\creflastconjunction}{, and }    % --Always use the serial comma
-
 
 % -- Figures and captions
 \usepackage{subcaption}             % -- Provides subfigure
@@ -115,6 +123,9 @@
 \newcommand{\Tv}{T_\mathrm{v}}
 \newcommand{\Ttr}{T_\mathrm{tr}}
 
+\newcommand{\er}{\varepsilon_\mathrm{rot}}
+\renewcommand{\ev}{\varepsilon_\mathrm{vib}}       % -- Renew b/c conflicts with physics, was expectation value
+
 % ===== The actual document
 % -- Almost all of the main body should be in separate files, 'include' here
 % -- For speed, only include the sections listed here for now.
@@ -153,8 +164,11 @@
 \bibliography{Bibliography}
 \endgroup
 
-% -- 
-
+% -- Appendix
+\begin{appendices}
+\include{appendix/nomenclature}
+\include{appendix/tables}
+\end{appendices}
 
 
 \end{document}
