@@ -21,7 +21,7 @@
 \begin{titlepage}
    \centering
    % -- Star required here for top of page, from comment to answer here: https://tex.stackexchange.com/questions/237994/titlepage-and-vertical-space
-   \vspace*{1 cm}
+   \vspace*{0.5 cm}
 
    % -- The actual thesis title
    {\LARGE \bfseries
@@ -79,10 +79,11 @@ This is the acknowledgements.
 % ===== Dedication
 % -- Could add a whole section here, but prefer the style from 3.2 of https://tug.org/pracjourn/2008-1/mori/mori.pdf
 % -- This section also easily customized.
+% -- The graduate school requires this page be numbered (although I think it would look better without it!)
 \newpage
-\thispagestyle{empty}
+\thispagestyle{plain}      % -- Has to include page number
 \phantomsection      % -- For hyperref location
-\addcontentsline{toc}{chapter}{Dedication}      % -- Should it be in TOC?
+\addcontentsline{toc}{chapter}{Dedication}
 \null\vspace{\stretch{1}}
 \begin{flushright}
    % \emph{\large for Lyndsay} \hphantom{AAAAA}
@@ -93,6 +94,7 @@ This is the acknowledgements.
 % ===== Abstract
 % -- Based strongly on mnthesis class
 % -- Abstract shouldn't have a big header, should be able to stand alone as a single page
+% -- Again, could \input{} text for this
 \newpage
 \thispagestyle{plain}
 \phantomsection      % -- For hyperref location

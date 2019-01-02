@@ -1,6 +1,7 @@
 % -- UMN Ph.D Thesis Template for modern Latex
 % -- Designed to use modern packages and basic modifications to yield a flexible result
 % -- Author: Ross S. Chaudhry, November 2018
+% -- Hosted on github at https://github.com/ross-chaudhry/modern-umn-latex-thesis
 
 % -- The most popular previous version uses a *lot* of hacks that should be done with modern packages.
 % -- (https://github.com/agude/UMN-PhD-Thesis-Template)
@@ -13,7 +14,7 @@
 %     ~ Thesis format guidelines from the grad school: https://assets.asr.umn.edu/files/gssp/Thesis_formatting_guidelines.pdf
 
 % -- main.tex includes all global formatting modifications
-% -- Other sections are:
+% -- Other sections should be customized for your thesis; this example just has the basics
 
 % -- Book class because it offers front, main, and backmatter commands
 % -- Good discussion here: https://tex.stackexchange.com/questions/36988/regarding-the-book-report-and-article-document-classes-what-are-the-mai
@@ -40,6 +41,8 @@
    includehead]
    {geometry}
 
+% -- Note that geometry should be *before* fancyhdr stuff, from here: https://tex.stackexchange.com/questions/327285/what-does-this-warning-mean-fancyhdr-and-headheight
+
 % -- Define headers and footers
 % -- This part can be highly customized by fancyhdr, here we choose something relatively simple
 
@@ -49,15 +52,16 @@
 % -- For all 'plain' pages, there is nothing in the header and the page number is centered in the footer.
 % -- 'Plain' pages are those which begin chapters, the title page, and other exceptions.
 \usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
 
 \pagestyle{fancy}                         % -- Modify the 'fancy' style
 \fancyhf{}                                % -- Clear header and footer
-\fancyhead[LO,RE]{\textbf{\rightmark}}    % -- Section number and title, in bold
-\fancyhead[RO,LE]{\thepage}               % -- Page number top right
+\fancyhead[LO]{\textbf{\rightmark}}       % -- Section number and title, in bold
+\fancyhead[RO]{\thepage}                  % -- Page number top right
 
 \fancypagestyle{plain}{                   % -- Modify the 'plain' style
 \fancyhf{}                                % -- Clear header and footer
-\fancyhead[RO,LE]{\thepage}               % -- Add page number to top right (like for fancy)
+\fancyhead[RO]{\thepage}                  % -- Add page number to top right (like for fancy)
 \renewcommand{\headrulewidth}{0pt}        % -- Remove rule on header
 }
 
@@ -92,6 +96,7 @@
 \usepackage{longtable}
 
 % -- Citations and references
+% -- Easily customizable to suit individual needs
 \usepackage[sort&compress,numbers]{natbib}
 \usepackage[noabbrev, capitalize]{cleveref}  % -- \cref{myfig} looks like Figure~\ref{myfig}
 \newcommand{\creflastconjunction}{, and }    % --Always use the serial comma
@@ -128,8 +133,7 @@
 % }%
 % \makeatother
 
-% -- Generate dummy text with lipsum
-% -- ONLY used for templating, should go away!
+% -- Generate dummy text with lipsum, for this template
 \usepackage{lipsum}
 
 % ===== All commands and macros, perhaps as input if it gets too long
@@ -154,10 +158,12 @@
 % -- If you are doing this, a fresh run *must* be run with includeonly uncommented first (https://tex.stackexchange.com/questions/280572/problem-using-includeonly)
 % \includeonly{
 %    frontmatter/frontmatter,
-%    introduction/introduction.
+%    introduction/introduction,
 %    methodology/methodology,
 %    results/results,
 %    conclusions/conclusions,
+%    appendix/glossary,
+%    appendix/tables,
 % }
 
 \begin{document}
@@ -187,10 +193,8 @@
 
 % -- Appendix
 \begin{appendices}
-\include{appendix/nomenclature}
+\include{appendix/glossary}
 \include{appendix/tables}
 \end{appendices}
 
-
 \end{document}
-
